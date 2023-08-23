@@ -3,6 +3,7 @@ package ru.yandex.diplom_2;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import com.github.javafaker.Faker;
 
 import static io.restassured.RestAssured.given;
 
@@ -75,8 +76,8 @@ public class ApiClient {
         return patchWithJsonBody(ENDPOINT_UPDATE_USER_PROFILE, requestBody, token);
     }
 
-    public static Response deleteUser(String token) {
-        return deleteWithToken(ENDPOINT_DELETE_USER, token);
+    public static Response deleteUser(String accessToken) {
+        return deleteWithToken(ENDPOINT_DELETE_USER, accessToken);
     }
 
     public static Response getAllOrders(String token) {
@@ -88,6 +89,15 @@ public class ApiClient {
     }
 
     // ... other helper methods ...
+
+    public Response createUniqueUser() {
+        Faker faker = new Faker();
+        String email = faker.internet().emailAddress();
+        String password = faker.internet().password();
+        String name = faker.name().fullName();
+
+        return registerUser(email, password, name);
+    }
 
     private static Response get(String endpoint) {
         return given()
@@ -121,9 +131,9 @@ public class ApiClient {
                 .patch(endpoint);
     }
 
-    private static Response deleteWithToken(String endpoint, String token) {
+    private static Response deleteWithToken(String endpoint, String accessToken) {
         return given()
-                .header("Authorization", "Bearer " + token)
+                .header("Authorization", "Bearer " + accessToken)
                 .when()
                 .delete(endpoint);
     }

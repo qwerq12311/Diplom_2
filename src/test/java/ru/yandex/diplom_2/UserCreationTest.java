@@ -1,4 +1,5 @@
 package ru.yandex.diplom_2;
+
 import com.github.javafaker.Faker;
 import org.junit.After;
 import org.junit.Before;
@@ -13,6 +14,8 @@ public class UserCreationTest {
     private ApiClient apiClient;
     private Faker faker;
 
+    private String createdUserAccessToken;
+
     @Before
     public void setup() {
         ApiClient.setup(); // Вызываем метод из ApiClient для установки базового URL
@@ -22,20 +25,20 @@ public class UserCreationTest {
 
     @After
     public void tearDown() {
-        // Perform cleanup, delete the created user if necessary
+        if (createdUserAccessToken != null) {
+            apiClient.deleteUser(createdUserAccessToken);
+        }
     }
 
     @Test
     public void testCreateUniqueUser() {
-        String email = faker.internet().emailAddress();
-        String password = faker.internet().password();
-        String name = faker.name().fullName();
-
-        Response response = apiClient.registerUser(email, password, name);
+        Response response = apiClient.createUniqueUser();
 
         response.then()
                 .statusCode(200)
                 .body("success", equalTo(true));
+
+        createdUserAccessToken = response.body().jsonPath().getString("accessToken");
 
         assertThat(response.path("success"), equalTo(true));
         System.out.println("Тест создания уникального пользователя завершен успешно");
