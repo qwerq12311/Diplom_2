@@ -15,6 +15,9 @@ public class UserCreationTest {
     private Faker faker;
 
     private String createdUserAccessToken;
+    private String createdUserEmail;
+    private String createdUserName;
+    private String createdUserPassword;
 
     @Before
     public void setup() {
@@ -32,15 +35,25 @@ public class UserCreationTest {
 
     @Test
     public void testCreateUniqueUser() {
-        Response response = apiClient.createUniqueUser();
+        // Генерируем случайные данные для создания пользователя
+        String email = apiClient.generateRandomEmail();
+        String password = apiClient.getUserPassword();
+        String name = apiClient.generateRandomName();
+
+        // Создаем пользователя
+        Response response = apiClient.registerUser(email, password, name);
 
         response.then()
                 .statusCode(200)
                 .body("success", equalTo(true));
 
+        // Сохраняем данные созданного пользователя для дальнейшего использования
         createdUserAccessToken = response.body().jsonPath().getString("accessToken");
+        createdUserEmail = email;
+        createdUserName = name;
+        createdUserPassword = password;
 
-        assertThat(response.path("success"), equalTo(true));
+        assertTrue(response.path("success"));
         System.out.println("Тест создания уникального пользователя завершен успешно");
     }
 
@@ -80,4 +93,3 @@ public class UserCreationTest {
         System.out.println("Тест создания пользователя с незаполненными обязательными полями завершен успешно");
     }
 }
-
