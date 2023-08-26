@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a013c32-2cc5-43b1-88b3-3387e5d18f72" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/OrderCreationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/UserOrdersTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/UserProfileUpdateTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/diplom_2/ApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/diplom_2/ApiClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/UserCreationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/UserCreationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/OrderCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/OrderCreationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,23 +43,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
-    "git-widget-placeholder": "dev",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -93,7 +87,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderCreationTests.testCreateOrderWithInvalidIngredientHash" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserCreationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="diplom_2" />
       <extension name="coverage">
         <pattern>
@@ -102,9 +96,23 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.yandex.diplom_2" />
-      <option name="MAIN_CLASS_NAME" value="ru.yandex.diplom_2.OrderCreationTests" />
-      <option name="METHOD_NAME" value="testCreateOrderWithInvalidIngredientHash" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="ru.yandex.diplom_2.UserCreationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserLoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="diplom_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.yandex.diplom_2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.yandex.diplom_2" />
+      <option name="MAIN_CLASS_NAME" value="ru.yandex.diplom_2.UserLoginTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -127,23 +135,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserProfileUpdateTest.testUpdateUserProfileWithoutAuthorization" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="diplom_2" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UserProfileUpdateTest" />
-      <option name="METHOD_NAME" value="testUpdateUserProfileWithoutAuthorization" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.OrderCreationTests" />
-        <item itemvalue="JUnit.UserOrdersTest" />
-        <item itemvalue="JUnit.UserProfileUpdateTest.testUpdateUserProfileWithoutAuthorization" />
         <item itemvalue="JUnit.UserProfileUpdateTest" />
-        <item itemvalue="JUnit.OrderCreationTests.testCreateOrderWithInvalidIngredientHash" />
+        <item itemvalue="JUnit.UserOrdersTest" />
+        <item itemvalue="JUnit.UserLoginTest" />
+        <item itemvalue="JUnit.UserCreationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -157,7 +155,9 @@
       <updated>1692739272172</updated>
       <workItem from="1692739273291" duration="1589000" />
       <workItem from="1692819268579" duration="5323000" />
-      <workItem from="1692828225963" duration="39485000" />
+      <workItem from="1692828225963" duration="40924000" />
+      <workItem from="1692980200629" duration="523000" />
+      <workItem from="1692995736032" duration="5429000" />
     </task>
     <task id="LOCAL-00001" summary="+ pom">
       <created>1692739640158</created>
@@ -180,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692833362695</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="1. almost done. need to rebuild OrderCreationTests's logic.&#10;2. Need to create reports.">
+      <created>1692927011721</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1692927011721</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +214,7 @@
     <MESSAGE value="+ pom" />
     <MESSAGE value="+ main + usercreation tests &#10;- need to figure out with deletion" />
     <MESSAGE value="+ main &#10;+ 1. user creation tests + figured out with deletion&#10;&#10;+ 2. Login" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ main &#10;+ 1. user creation tests + figured out with deletion&#10;&#10;+ 2. Login" />
+    <MESSAGE value="1. almost done. need to rebuild OrderCreationTests's logic.&#10;2. Need to create reports." />
+    <option name="LAST_COMMIT_MESSAGE" value="1. almost done. need to rebuild OrderCreationTests's logic.&#10;2. Need to create reports." />
   </component>
 </project>

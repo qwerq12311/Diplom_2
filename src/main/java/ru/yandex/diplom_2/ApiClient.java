@@ -12,21 +12,11 @@ import java.util.Random;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
-import io.restassured.response.Response;
+
 import static io.restassured.RestAssured.given;
-import io.restassured.path.json.JsonPath;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
+
 import com.google.gson.JsonObject;
 
-
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import io.restassured.response.Response;
-import static io.restassured.RestAssured.given;
-
-import static io.restassured.RestAssured.given;
 
 public class ApiClient {
 
@@ -89,10 +79,29 @@ public class ApiClient {
         return createOrder(ingredients, ""); // Пустой AccessToken
     }
 
+    public static Response createOrderWithoutIngredients(String accessToken) {
+        String requestBody = "{\"ingredients\": []}"; // Пустой массив ингредиентов
+        return post(ENDPOINT_CREATE_ORDER, requestBody, accessToken);
+    }
+
 
     public static Response createOrder(String[] ingredients, String accessToken) {
         String[] randomIngredients = getRandomIngredientsArray(); // Получаем рандомные ингредиенты
         String requestBody = "{\"ingredients\":" + ingredientsToJsonArray(randomIngredients) + "}";
+        return post(ENDPOINT_CREATE_ORDER, requestBody, accessToken);
+    }
+
+    public static Response createOrderWithInvalidHash(String accessToken) {
+        String randomIngredientId1 = ApiClient.getRandomIngredientId();
+        String randomIngredientId2 = ApiClient.getRandomIngredientId();
+
+        // Изменяем id ингредиентов, добавляя "invalid-" в начало каждого id
+        String modifiedIngredientId1 = "invalid-" + randomIngredientId1;
+        String modifiedIngredientId2 = "invalid-" + randomIngredientId2;
+
+        String[] ingredients = {modifiedIngredientId1, modifiedIngredientId2};
+
+        String requestBody = "{\"ingredients\":" + ingredientsToJsonArray(ingredients) + "}";
         return post(ENDPOINT_CREATE_ORDER, requestBody, accessToken);
     }
 
@@ -112,16 +121,6 @@ public class ApiClient {
     }
 
 
-    public static Response resetUserPassword(String email) {
-        String requestBody = "{\"email\":\"" + email + "\"}";
-        return post(ENDPOINT_RESET_PASSWORD, requestBody);
-    }
-
-    public static Response resetUserPasswordWithToken(String newPassword, String resetToken) {
-        String requestBody = "{\"password\":\"" + newPassword + "\", \"token\":\"" + resetToken + "\"}";
-        return post(ENDPOINT_RESET_PASSWORD_RESET, requestBody);
-    }
-
     public static Response registerUser(String email, String userPassword, String name) {
         JsonObject requestBody = new JsonObject();
         requestBody.addProperty("email", email);
@@ -138,20 +137,6 @@ public class ApiClient {
         return post(ENDPOINT_LOGIN_USER, requestBody);
     }
 
-    public static Response logoutUser(String refreshToken) {
-        String requestBody = "{\"token\":\"" + refreshToken + "\"}";
-        return post(ENDPOINT_LOGOUT_USER, requestBody);
-    }
-
-    public static Response refreshToken(String email, String password) {
-        String requestBody = "{\"email\":\"" + email + "\", \"password\":\"" + password + "\"}";
-        return post(ENDPOINT_REFRESH_TOKEN, requestBody);
-    }
-
-    public static Response getUserProfile(String accessToken) {
-        return getWithToken(ENDPOINT_GET_USER_PROFILE, accessToken);
-    }
-
 
     public static Response updateUserProfile(String newName, String newEmail, String accessToken) {
         String requestBody = "{\"name\":\"" + newName + "\", \"email\":\"" + newEmail + "\"}";
@@ -163,9 +148,6 @@ public class ApiClient {
         return deleteWithToken(ENDPOINT_DELETE_USER, accessToken);
     }
 
-    public static Response getAllOrders(String accessToken) {
-       return getWithToken(ENDPOINT_GET_ALL_ORDERS, accessToken);
-    }
 
    public static Response getUserOrders(String accessToken) {
        return getWithToken(ENDPOINT_GET_USER_ORDERS, accessToken);
@@ -188,11 +170,7 @@ public class ApiClient {
         return faker.name().fullName();
     }
 
-    private static Response get(String endpoint) {
-        return given()
-                .when()
-                .get(endpoint);
-    }
+
 
     private static Response post(String endpoint, String requestBody) {
         return given()

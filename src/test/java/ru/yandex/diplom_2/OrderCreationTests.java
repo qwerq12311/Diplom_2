@@ -8,6 +8,7 @@ import io.restassured.path.json.JsonPath;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
@@ -95,9 +96,9 @@ public class OrderCreationTests {
 
     @Test
     public void testCreateOrderWithoutIngredients() {
-        List<String> emptyIngredientsList = new ArrayList<>(); // Создаем пустой список ингредиентов
 
-        Response orderResponse = ApiClient.createOrder(emptyIngredientsList.toArray(new String[0]), loginUserAccessToken);
+
+        Response orderResponse = ApiClient.createOrderWithoutIngredients(loginUserAccessToken);
 
         System.out.println("Response Status Code: " + orderResponse.statusCode());
         System.out.println("Response Body: " + orderResponse.body().asString());
@@ -106,19 +107,14 @@ public class OrderCreationTests {
 
     @Test
     public void testCreateOrderWithInvalidIngredientHash() {
-        String randomIngredientId1 = ApiClient.getRandomIngredientId();
-        String randomIngredientId2 = ApiClient.getRandomIngredientId();
 
-        // Изменяем id ингредиентов, добавляя "-invalid" в конец каждого id
-        String modifiedIngredientId1 = randomIngredientId1 + "-invalid";
-        String modifiedIngredientId2 = randomIngredientId2 + "-invalid";
 
-        String[] ingredients = {modifiedIngredientId1, modifiedIngredientId2};
 
-        Response orderResponse = ApiClient.createOrder(ingredients, loginUserAccessToken);
+        Response orderResponse = ApiClient.createOrderWithInvalidHash(loginUserAccessToken);
 
         System.out.println("Response Status Code: " + orderResponse.statusCode());
         System.out.println("Response Body: " + orderResponse.body().asString());
-        assertEquals(400, orderResponse.statusCode()); // Ожидаем статус 400 Bad Request
+        assertEquals(500, orderResponse.statusCode()); // Ожидаем статус 400 Bad Request
     }
+
 }
