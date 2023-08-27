@@ -68,7 +68,7 @@ public class UserProfileUpdateTest {
     }
 
     @Test
-    @DisplayName("Test updating user profile without authorization")
+    @DisplayName("Test updating user profile without authorization1")
     @Description("Test for updating user profile without authorization")
 
     public void testUpdateUserProfileWithoutAuthorization() {
