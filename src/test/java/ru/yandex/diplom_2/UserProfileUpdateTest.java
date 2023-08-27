@@ -1,13 +1,20 @@
+package ru.yandex.diplom_2;
+
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import com.github.javafaker.Faker;
 import io.restassured.response.Response;
-import ru.yandex.diplom_2.ApiClient;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertEquals;
 
+@Epic("Diplom_2")
+@Feature("User Profile Update")
 public class UserProfileUpdateTest {
 
     private String accessToken;
@@ -39,6 +46,9 @@ public class UserProfileUpdateTest {
     }
 
     @Test
+    @DisplayName("Test updating user profile with authorization")
+    @Description("Test for updating user profile with authorization")
+
     public void testUpdateUserProfileWithAuthorization() {
         // Генерируем новые случайные данные
         Faker faker = new Faker();
@@ -58,6 +68,9 @@ public class UserProfileUpdateTest {
     }
 
     @Test
+    @DisplayName("Test updating user profile without authorization")
+    @Description("Test for updating user profile without authorization")
+
     public void testUpdateUserProfileWithoutAuthorization() {
         // Генерируем новые случайные данные
         Faker faker = new Faker();

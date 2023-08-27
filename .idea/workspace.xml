@@ -6,8 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="5a013c32-2cc5-43b1-88b3-3387e5d18f72" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/diplom_2/ApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/diplom_2/ApiClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/OrderCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/OrderCreationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/UserCreationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/UserCreationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/UserLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/UserLoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/UserOrdersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/UserOrdersTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/UserProfileUpdateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/UserProfileUpdateTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +62,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.toDoOptions&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -71,7 +77,12 @@
       <recent name="ru.yandex.diplom_2" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.OrderCreationTests">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean test" />
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.UserLoginTest.testSuccessfulUserLogin">
     <configuration name="OrderCreationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="diplom_2" />
       <extension name="coverage">
@@ -102,8 +113,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserLoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="diplom_2" />
+    <configuration name="UserLoginTest.testSuccessfulUserLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_3" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ru.yandex.diplom_2.*" />
@@ -112,15 +123,22 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.yandex.diplom_2" />
       <option name="MAIN_CLASS_NAME" value="ru.yandex.diplom_2.UserLoginTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="testSuccessfulUserLogin" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserOrdersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserProfileUpdateTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="diplom_2" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UserOrdersTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.yandex.diplom_2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.yandex.diplom_2" />
+      <option name="MAIN_CLASS_NAME" value="ru.yandex.diplom_2.UserProfileUpdateTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -137,11 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserLoginTest.testSuccessfulUserLogin" />
         <item itemvalue="JUnit.OrderCreationTests" />
-        <item itemvalue="JUnit.UserProfileUpdateTest" />
-        <item itemvalue="JUnit.UserOrdersTest" />
-        <item itemvalue="JUnit.UserLoginTest" />
+        <item itemvalue="JUnit.UserProfileUpdateTest (1)" />
         <item itemvalue="JUnit.UserCreationTest" />
+        <item itemvalue="JUnit.UserProfileUpdateTest" />
       </list>
     </recent_temporary>
   </component>
@@ -157,7 +175,9 @@
       <workItem from="1692819268579" duration="5323000" />
       <workItem from="1692828225963" duration="40924000" />
       <workItem from="1692980200629" duration="523000" />
-      <workItem from="1692995736032" duration="5429000" />
+      <workItem from="1692995736032" duration="6317000" />
+      <workItem from="1693157683187" duration="2437000" />
+      <workItem from="1693161907006" duration="4248000" />
     </task>
     <task id="LOCAL-00001" summary="+ pom">
       <created>1692739640158</created>
@@ -187,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692927011721</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="3.all done&#10;&#10;must do - reports">
+      <created>1693089312521</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1693089312521</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +242,7 @@
     <MESSAGE value="+ main + usercreation tests &#10;- need to figure out with deletion" />
     <MESSAGE value="+ main &#10;+ 1. user creation tests + figured out with deletion&#10;&#10;+ 2. Login" />
     <MESSAGE value="1. almost done. need to rebuild OrderCreationTests's logic.&#10;2. Need to create reports." />
-    <option name="LAST_COMMIT_MESSAGE" value="1. almost done. need to rebuild OrderCreationTests's logic.&#10;2. Need to create reports." />
+    <MESSAGE value="3.all done&#10;&#10;must do - reports" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.all done&#10;&#10;must do - reports" />
   </component>
 </project>

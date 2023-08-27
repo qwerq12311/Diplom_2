@@ -20,6 +20,7 @@ import com.google.gson.JsonObject;
 
 public class ApiClient {
 
+    //  URL для API
     public static final String BASE_URL = "https://stellarburgers.nomoreparties.site/api";
     private static final String ENDPOINT_INGREDIENTS = "/ingredients";
     private static final String ENDPOINT_CREATE_ORDER = "/orders";
@@ -27,14 +28,12 @@ public class ApiClient {
     private static final String ENDPOINT_RESET_PASSWORD_RESET = "/password-reset/reset";
     private static final String ENDPOINT_REGISTER_USER = "/auth/register";
     private static final String ENDPOINT_LOGIN_USER = "/auth/login";
-    private static final String ENDPOINT_LOGOUT_USER = "/auth/logout";
-    private static final String ENDPOINT_REFRESH_TOKEN = "/auth/token";
-    private static final String ENDPOINT_GET_USER_PROFILE = "/auth/user";
     public static final String ENDPOINT_UPDATE_USER_PROFILE = "/auth/user";
     private static final String ENDPOINT_DELETE_USER = "/auth/user";
-    private static final String ENDPOINT_GET_ALL_ORDERS = "/orders/all";
     private static final String ENDPOINT_GET_USER_ORDERS = "/orders";
 
+
+    // Методы для получения ингредиентов
     public static void setup() {
         RestAssured.baseURI = BASE_URL;
     }
@@ -71,6 +70,28 @@ public class ApiClient {
 
         return ingredientIds;
     }
+
+    private static String ingredientsToJsonArray(String[] ingredients) {
+        StringBuilder jsonArray = new StringBuilder("[");
+        for (int i = 0; i < ingredients.length; i++) {
+            jsonArray.append("\"").append(ingredients[i]).append("\"");
+            if (i < ingredients.length - 1) {
+                jsonArray.append(",");
+            }
+        }
+        jsonArray.append("]");
+        return jsonArray.toString();
+    }
+
+    private static String[] getRandomIngredientsArray() {
+        String[] ingredientIds = getIngredientIds().toArray(new String[0]);
+        Random random = new Random();
+        int randomIndex1 = random.nextInt(ingredientIds.length);
+        int randomIndex2 = random.nextInt(ingredientIds.length);
+        return new String[]{ingredientIds[randomIndex1], ingredientIds[randomIndex2]};
+    }
+
+    // Методы для создания заказа
 
     public static Response createOrderWithRandomIngredientsWithoutToken() {
         List<String> ingredientIds = getIngredientIds();
@@ -112,14 +133,8 @@ public class ApiClient {
         return createOrder(ingredients, accessToken);
     }
 
-    private static String[] getRandomIngredientsArray() {
-        String[] ingredientIds = getIngredientIds().toArray(new String[0]);
-        Random random = new Random();
-        int randomIndex1 = random.nextInt(ingredientIds.length);
-        int randomIndex2 = random.nextInt(ingredientIds.length);
-        return new String[]{ingredientIds[randomIndex1], ingredientIds[randomIndex2]};
-    }
 
+    // Методы для взаимодействия с пользователем
 
     public static Response registerUser(String email, String userPassword, String name) {
         JsonObject requestBody = new JsonObject();
@@ -153,7 +168,8 @@ public class ApiClient {
        return getWithToken(ENDPOINT_GET_USER_ORDERS, accessToken);
     }
 
-    // ... other helper methods ...
+
+    // Методы для создания уникального пользователя
 
     private static String userPassword = "123QWE";
     public static String getUserPassword() {
@@ -171,6 +187,7 @@ public class ApiClient {
     }
 
 
+    // Методы для запросов
 
     private static Response post(String endpoint, String requestBody) {
         return given()
@@ -215,15 +232,5 @@ public class ApiClient {
     }
 
 
-    private static String ingredientsToJsonArray(String[] ingredients) {
-        StringBuilder jsonArray = new StringBuilder("[");
-        for (int i = 0; i < ingredients.length; i++) {
-            jsonArray.append("\"").append(ingredients[i]).append("\"");
-            if (i < ingredients.length - 1) {
-                jsonArray.append(",");
-            }
-        }
-        jsonArray.append("]");
-        return jsonArray.toString();
-    }
+
 }

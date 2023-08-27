@@ -1,6 +1,10 @@
 package ru.yandex.diplom_2;
 
 import com.github.javafaker.Faker;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -9,11 +13,12 @@ import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.*;
 import static io.restassured.RestAssured.*;
 
+@Epic("Diplom_2")
+@Feature("User Login")
 public class UserLoginTest {
 
     private ApiClient apiClient;
     private Faker faker;
-
     private String createdUserEmail;
     private String createdUserName;
     private String createdUserPassword;
@@ -43,6 +48,9 @@ public class UserLoginTest {
     }
 
     @Test
+    @DisplayName("Test successful user login")
+    @Description("Test for successful user login")
+
     public void testSuccessfulUserLogin() {
         Response response = apiClient.loginUser(createdUserEmail, createdUserPassword);
 
@@ -61,6 +69,9 @@ public class UserLoginTest {
     }
 
     @Test
+    @DisplayName("Test unsuccessful user login")
+    @Description("Test for unsuccessful user login")
+
     public void testUnsuccessfulUserLogin() {
         Response response = apiClient.loginUser("invalidEmail", "invalidToken");
 

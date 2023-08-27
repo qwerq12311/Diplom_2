@@ -1,6 +1,10 @@
 package ru.yandex.diplom_2;
 
 import com.github.javafaker.Faker;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -9,15 +13,16 @@ import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.*;
 import static io.restassured.RestAssured.*;
 
+@Epic("Diplom_2")
+@Feature("User Creation")
+
 public class UserCreationTest {
 
     private ApiClient apiClient;
     private Faker faker;
 
     private String createdUserAccessToken;
-    private String createdUserEmail;
-    private String createdUserName;
-    private String createdUserPassword;
+
 
     @Before
     public void setup() {
@@ -34,6 +39,9 @@ public class UserCreationTest {
     }
 
     @Test
+    @DisplayName("Тест на создание уникального пользователя")
+    @Description("Тест на создание уникального пользователя")
+
     public void testCreateUniqueUser() {
         // Генерируем случайные данные для создания пользователя
         String email = apiClient.generateRandomEmail();
@@ -49,15 +57,16 @@ public class UserCreationTest {
 
         // Сохраняем данные созданного пользователя для дальнейшего использования
         createdUserAccessToken = response.body().jsonPath().getString("accessToken");
-        createdUserEmail = email;
-        createdUserName = name;
-        createdUserPassword = password;
+
 
         assertTrue(response.path("success"));
         System.out.println("Тест создания уникального пользователя завершен успешно");
     }
 
     @Test
+    @DisplayName("Тест на создание пользователя с дублированным email")
+    @Description("Тест на создание пользователя с дублированным email")
+
     public void testCreateDuplicateUser() {
         String email = faker.internet().emailAddress();
         String password = faker.internet().password();
@@ -80,6 +89,9 @@ public class UserCreationTest {
     }
 
     @Test
+    @DisplayName("Тест на создание пользователя с незаполненными обязательными полями")
+    @Description("Тест на создание пользователя с незаполненными обязательными полями")
+
     public void testCreateUserWithMissingFields() {
         Response response = apiClient.registerUser("", "", "");
 

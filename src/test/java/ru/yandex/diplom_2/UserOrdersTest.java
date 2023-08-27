@@ -1,12 +1,19 @@
+package ru.yandex.diplom_2;
+
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import io.restassured.response.Response;
-import ru.yandex.diplom_2.ApiClient;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertEquals;
 
+@Epic("Diplom_2")
+@Feature("User Orders")
 public class UserOrdersTest {
 
     private String createUserAccessToken;
@@ -44,6 +51,9 @@ public class UserOrdersTest {
     }
 
     @Test
+    @DisplayName("Test getting user orders with authorization")
+    @Description("Test for getting user orders with authorization")
+
     public void testGetUserOrdersWithAuthorization() {
         // Получаем заказы пользователя с использованием авторизованного токена
         Response getUserOrdersResponse = ApiClient.getUserOrders(loginUserAccessToken);
@@ -56,6 +66,9 @@ public class UserOrdersTest {
     }
 
     @Test
+    @DisplayName("Test getting user orders without authorization")
+    @Description("Test for getting user orders without authorization")
+
     public void testGetUserOrdersWithoutAuthorization() {
         // Попытка получить заказы без авторизации (ожидаем статус 401)
         Response getUserOrdersResponse = ApiClient.getUserOrders("");

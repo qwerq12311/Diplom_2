@@ -1,18 +1,20 @@
 package ru.yandex.diplom_2;
 
+import io.qameta.allure.*;
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import io.restassured.path.json.JsonPath;
 
-
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
+
+@Epic("Diplom_2")
+@Feature("Order creation")
 
 public class OrderCreationTests {
 
@@ -26,7 +28,7 @@ public class OrderCreationTests {
     public void setUp() {
         ApiClient.setup();
 
-        // Создание пользователя и получение AccessToken
+
         userEmail = ApiClient.generateRandomEmail();
         userName = ApiClient.generateRandomName();
         userPassword = ApiClient.getUserPassword();
@@ -57,6 +59,9 @@ public class OrderCreationTests {
     }
 
     @Test
+    @DisplayName("Тест создания заказа с аутентификацией и ингредиентами")
+    @Description("Выполняем тест на создание заказа с аутентификацией и ингредиентами")
+
     public void testCreateOrderWithAuthenticationAndIngredients() {
         List<String> ingredientIds = ApiClient.getIngredientIds();
         String randomIngredientId = ApiClient.getRandomIngredientId();
@@ -70,6 +75,9 @@ public class OrderCreationTests {
     }
 
     @Test
+    @DisplayName("Тест создания заказа без аутентификации")
+    @Description("Выполняем тест на создание заказа без аутентификации")
+
     public void testCreateOrderWithoutAuthentication() {
         String randomIngredientId = ApiClient.getRandomIngredientId();
         String[] ingredients = {randomIngredientId};
@@ -82,6 +90,9 @@ public class OrderCreationTests {
     }
 
     @Test
+    @DisplayName("Тест создания заказа с ингредиентами")
+    @Description("Выполняем тест на создание заказа с ингредиентами")
+
     public void testCreateOrderWithIngredients() {
         List<String> ingredientIds = ApiClient.getIngredientIds();
         String randomIngredientId = ApiClient.getRandomIngredientId();
@@ -95,8 +106,10 @@ public class OrderCreationTests {
     }
 
     @Test
-    public void testCreateOrderWithoutIngredients() {
+    @DisplayName("Тест создания заказа без ингредиентов")
+    @Description("Выполняем тест на создание заказа без ингредиентов")
 
+    public void testCreateOrderWithoutIngredients() {
 
         Response orderResponse = ApiClient.createOrderWithoutIngredients(loginUserAccessToken);
 
@@ -106,6 +119,9 @@ public class OrderCreationTests {
     }
 
     @Test
+    @DisplayName("Тест создания заказа с некорректным хешем ингредиента")
+    @Description("Выполняем тест на создание заказа с некорректным хешем ингредиента")
+
     public void testCreateOrderWithInvalidIngredientHash() {
 
 
