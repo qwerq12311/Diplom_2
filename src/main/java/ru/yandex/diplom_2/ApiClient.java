@@ -24,8 +24,6 @@ public class ApiClient {
     public static final String BASE_URL = "https://stellarburgers.nomoreparties.site/api";
     private static final String ENDPOINT_INGREDIENTS = "/ingredients";
     private static final String ENDPOINT_CREATE_ORDER = "/orders";
-    private static final String ENDPOINT_RESET_PASSWORD = "/password-reset";
-    private static final String ENDPOINT_RESET_PASSWORD_RESET = "/password-reset/reset";
     private static final String ENDPOINT_REGISTER_USER = "/auth/register";
     private static final String ENDPOINT_LOGIN_USER = "/auth/login";
     public static final String ENDPOINT_UPDATE_USER_PROFILE = "/auth/user";
@@ -94,7 +92,6 @@ public class ApiClient {
     // Методы для создания заказа
 
     public static Response createOrderWithRandomIngredientsWithoutToken() {
-        List<String> ingredientIds = getIngredientIds();
         String randomIngredientId = getRandomIngredientId();
         String[] ingredients = {randomIngredientId};
         return createOrder(ingredients, ""); // Пустой AccessToken
@@ -106,9 +103,8 @@ public class ApiClient {
     }
 
 
-    public static Response createOrder(String[] ingredients, String accessToken) {
-        String[] randomIngredients = getRandomIngredientsArray(); // Получаем рандомные ингредиенты
-        String requestBody = "{\"ingredients\":" + ingredientsToJsonArray(randomIngredients) + "}";
+     public static Response createOrder(String[] ingredients, String accessToken) {
+        String requestBody = "{\"ingredients\":" + ingredientsToJsonArray(ingredients) + "}";
         return post(ENDPOINT_CREATE_ORDER, requestBody, accessToken);
     }
 
@@ -127,7 +123,7 @@ public class ApiClient {
     }
 
     public static Response createOrderWithRandomIngredients(String accessToken) {
-        List<String> ingredientIds = getIngredientIds();
+
         String randomIngredientId = getRandomIngredientId();
         String[] ingredients = {randomIngredientId};
         return createOrder(ingredients, accessToken);

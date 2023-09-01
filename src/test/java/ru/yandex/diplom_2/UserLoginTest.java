@@ -11,7 +11,6 @@ import org.junit.Test;
 import io.restassured.response.Response;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.*;
-import static io.restassured.RestAssured.*;
 
 @Epic("Diplom_2")
 @Feature("User Login")
@@ -27,7 +26,6 @@ public class UserLoginTest {
     @Before
     public void setup() {
         ApiClient.setup();
-        apiClient = new ApiClient();
         faker = new Faker();
 
 

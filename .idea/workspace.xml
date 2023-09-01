@@ -5,40 +5,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a013c32-2cc5-43b1-88b3-3387e5d18f72" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/target/allure-results/1d08c03f-e8b5-418e-8abc-9d24d2b04de4-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/3512ae9d-cec4-489c-9dbe-8458bb475855-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/49869e73-2b6a-4ffa-938a-eb1e35bc269b-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/4af592bd-aafc-44c5-a50a-c8e73e34c1d2-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/4c3e39aa-5a3c-49ed-ab94-dffe54287ab9-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/6794aabb-39d2-4873-aa67-eafef0d35edd-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/69550d27-13d5-4ebf-bd28-3048f8c308df-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/77a4364f-ae28-44be-b9aa-8e790c0a1882-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/8e7bed27-06a0-42a2-90e7-d63ada2b5f71-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/91b9e905-e462-4685-ad87-c7c8c1ef8ab3-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/ac66706f-b09a-480d-aaf2-445c5eea4d3c-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/e481f415-d4ae-4d48-b1f9-ccdcbfea99ee-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/ec978835-4a89-46a4-b8b3-e45434f9db9c-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/ecc74c9c-69ef-4e59-b666-865d309f1f0a-result.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/diplom_2/ApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/diplom_2/ApiClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/OrderCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/OrderCreationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/UserCreationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/UserCreationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/UserLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/UserLoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/UserOrdersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/UserOrdersTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/UserProfileUpdateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/UserProfileUpdateTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-        <option value="JUnit4 Test Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="Radchenko Aleksey &lt;radchenko.aleksei@gmail.com&gt;" />
-      </list>
-    </option>
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="main" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="7bcddf65c29b8d1bd62b6bd84dc886d8da4ec5b2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="SOFT" />
   </component>
   <component name="ProjectId" id="2UMArKhLdXLahktn9TJhfX5ozuX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -48,41 +63,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.toDoOptions&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "dev",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="ru.yandex.diplom_2" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="ru.yandex.diplom_2" />
-    </key>
-  </component>
-  <component name="RunAnythingCache">
-    <option name="myCommands">
-      <command value="mvn clean test" />
-    </option>
-  </component>
-  <component name="RunManager" selected="JUnit.UserLoginTest.testSuccessfulUserLogin">
+}]]></component>
+  <component name="RunManager" selected="JUnit.OrderCreationTests.testCreateOrderWithAuthenticationAndIngredients">
     <configuration name="OrderCreationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="diplom_2" />
       <extension name="coverage">
@@ -98,7 +94,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserCreationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderCreationTests.testCreateOrderWithAuthenticationAndIngredients" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="diplom_2" />
       <extension name="coverage">
         <pattern>
@@ -107,14 +103,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.yandex.diplom_2" />
-      <option name="MAIN_CLASS_NAME" value="ru.yandex.diplom_2.UserCreationTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="ru.yandex.diplom_2.OrderCreationTests" />
+      <option name="METHOD_NAME" value="testCreateOrderWithAuthenticationAndIngredients" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserLoginTest.testSuccessfulUserLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Diplom_3" />
+    <configuration name="OrderCreationTests.testCreateOrderWithIngredients" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="diplom_2" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ru.yandex.diplom_2.*" />
@@ -122,8 +119,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.yandex.diplom_2" />
-      <option name="MAIN_CLASS_NAME" value="ru.yandex.diplom_2.UserLoginTest" />
-      <option name="METHOD_NAME" value="testSuccessfulUserLogin" />
+      <option name="MAIN_CLASS_NAME" value="ru.yandex.diplom_2.OrderCreationTests" />
+      <option name="METHOD_NAME" value="testCreateOrderWithIngredients" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserOrdersTest.testGetUserOrdersWithAuthorization" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="diplom_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.yandex.diplom_2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.yandex.diplom_2" />
+      <option name="MAIN_CLASS_NAME" value="ru.yandex.diplom_2.UserOrdersTest" />
+      <option name="METHOD_NAME" value="testGetUserOrdersWithAuthorization" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -144,22 +157,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserProfileUpdateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="diplom_2" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UserProfileUpdateTest" />
-      <option name="TEST_OBJECT" value="class" />
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Diplom_2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Diplom_2" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserLoginTest.testSuccessfulUserLogin" />
+        <item itemvalue="JUnit.OrderCreationTests.testCreateOrderWithAuthenticationAndIngredients" />
         <item itemvalue="JUnit.OrderCreationTests" />
+        <item itemvalue="JUnit.OrderCreationTests.testCreateOrderWithIngredients" />
+        <item itemvalue="JUnit.UserOrdersTest.testGetUserOrdersWithAuthorization" />
         <item itemvalue="JUnit.UserProfileUpdateTest (1)" />
-        <item itemvalue="JUnit.UserCreationTest" />
-        <item itemvalue="JUnit.UserProfileUpdateTest" />
       </list>
     </recent_temporary>
   </component>
@@ -171,50 +188,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1692739272172</updated>
-      <workItem from="1692739273291" duration="1589000" />
-      <workItem from="1692819268579" duration="5323000" />
-      <workItem from="1692828225963" duration="40924000" />
-      <workItem from="1692980200629" duration="523000" />
-      <workItem from="1692995736032" duration="6317000" />
-      <workItem from="1693157683187" duration="2437000" />
-      <workItem from="1693161907006" duration="4248000" />
+      <workItem from="1692739273291" duration="341000" />
+      <workItem from="1693174242043" duration="4988000" />
     </task>
-    <task id="LOCAL-00001" summary="+ pom">
-      <created>1692739640158</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1692739640158</updated>
-    </task>
-    <task id="LOCAL-00002" summary="+ main + usercreation tests &#10;- need to figure out with deletion">
-      <created>1692824554426</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1692824554426</updated>
-    </task>
-    <task id="LOCAL-00003" summary="+ main &#10;+ 1. user creation tests + figured out with deletion&#10;&#10;+ 2. Login">
-      <created>1692833362695</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1692833362695</updated>
-    </task>
-    <task id="LOCAL-00004" summary="1. almost done. need to rebuild OrderCreationTests's logic.&#10;2. Need to create reports.">
-      <created>1692927011721</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1692927011721</updated>
-    </task>
-    <task id="LOCAL-00005" summary="3.all done&#10;&#10;must do - reports">
-      <created>1693089312521</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1693089312521</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,9 +202,15 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+              <option name="FILTERS">
                 <map>
-                  <entry key="Show.Git.Branches" value="false" />
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="dev" />
+                      </list>
+                    </value>
+                  </entry>
                 </map>
               </option>
             </State>
@@ -236,13 +218,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="+ pom" />
-    <MESSAGE value="+ main + usercreation tests &#10;- need to figure out with deletion" />
-    <MESSAGE value="+ main &#10;+ 1. user creation tests + figured out with deletion&#10;&#10;+ 2. Login" />
-    <MESSAGE value="1. almost done. need to rebuild OrderCreationTests's logic.&#10;2. Need to create reports." />
-    <MESSAGE value="3.all done&#10;&#10;must do - reports" />
-    <option name="LAST_COMMIT_MESSAGE" value="3.all done&#10;&#10;must do - reports" />
   </component>
 </project>

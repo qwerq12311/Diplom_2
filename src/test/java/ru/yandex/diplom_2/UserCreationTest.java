@@ -11,7 +11,6 @@ import org.junit.Test;
 import io.restassured.response.Response;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.*;
-import static io.restassured.RestAssured.*;
 
 @Epic("Diplom_2")
 @Feature("User Creation")
@@ -27,14 +26,13 @@ public class UserCreationTest {
     @Before
     public void setup() {
         ApiClient.setup(); // Вызываем метод из ApiClient для установки базового URL
-        apiClient = new ApiClient();
         faker = new Faker();
     }
 
     @After
     public void tearDown() {
         if (createdUserAccessToken != null) {
-            apiClient.deleteUser(createdUserAccessToken);
+            ApiClient.deleteUser(createdUserAccessToken);
         }
     }
 
@@ -44,12 +42,12 @@ public class UserCreationTest {
 
     public void testCreateUniqueUser() {
         // Генерируем случайные данные для создания пользователя
-        String email = apiClient.generateRandomEmail();
-        String password = apiClient.getUserPassword();
-        String name = apiClient.generateRandomName();
+        String email = ApiClient.generateRandomEmail();
+        String password = ApiClient.getUserPassword();
+        String name = ApiClient.generateRandomName();
 
         // Создаем пользователя
-        Response response = apiClient.registerUser(email, password, name);
+        Response response = ApiClient.registerUser(email, password, name);
 
         response.then()
                 .statusCode(200)
@@ -73,10 +71,10 @@ public class UserCreationTest {
         String name = faker.name().fullName();
 
         // First, create the user
-        apiClient.registerUser(email, password, name);
+        ApiClient.registerUser(email, password, name);
 
         // Then, try creating the user with the same email again
-        Response response = apiClient.registerUser(email, password, name);
+        Response response = ApiClient.registerUser(email, password, name);
 
         response.then()
                 .statusCode(403)
@@ -93,7 +91,7 @@ public class UserCreationTest {
     @Description("Тест на создание пользователя с незаполненными обязательными полями")
 
     public void testCreateUserWithMissingFields() {
-        Response response = apiClient.registerUser("", "", "");
+        Response response = ApiClient.registerUser("", "", "");
 
         response.then()
                 .statusCode(403)
