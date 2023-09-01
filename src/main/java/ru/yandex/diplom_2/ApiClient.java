@@ -80,14 +80,7 @@ public class ApiClient {
         jsonArray.append("]");
         return jsonArray.toString();
     }
-
-    private static String[] getRandomIngredientsArray() {
-        String[] ingredientIds = getIngredientIds().toArray(new String[0]);
-        Random random = new Random();
-        int randomIndex1 = random.nextInt(ingredientIds.length);
-        int randomIndex2 = random.nextInt(ingredientIds.length);
-        return new String[]{ingredientIds[randomIndex1], ingredientIds[randomIndex2]};
-    }
+    
 
     // Методы для создания заказа
 

@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a013c32-2cc5-43b1-88b3-3387e5d18f72" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/target/allure-results/1d08c03f-e8b5-418e-8abc-9d24d2b04de4-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/allure-results/3512ae9d-cec4-489c-9dbe-8458bb475855-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/allure-results/49869e73-2b6a-4ffa-938a-eb1e35bc269b-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/allure-results/4af592bd-aafc-44c5-a50a-c8e73e34c1d2-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/allure-results/4c3e39aa-5a3c-49ed-ab94-dffe54287ab9-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/allure-results/6794aabb-39d2-4873-aa67-eafef0d35edd-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/allure-results/69550d27-13d5-4ebf-bd28-3048f8c308df-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/allure-results/77a4364f-ae28-44be-b9aa-8e790c0a1882-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/allure-results/8e7bed27-06a0-42a2-90e7-d63ada2b5f71-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/allure-results/91b9e905-e462-4685-ad87-c7c8c1ef8ab3-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/allure-results/ac66706f-b09a-480d-aaf2-445c5eea4d3c-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/allure-results/e481f415-d4ae-4d48-b1f9-ccdcbfea99ee-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/allure-results/ec978835-4a89-46a4-b8b3-e45434f9db9c-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/allure-results/ecc74c9c-69ef-4e59-b666-865d309f1f0a-result.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/diplom_2/ApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/diplom_2/ApiClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/OrderCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/OrderCreationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/UserCreationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/UserCreationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/UserLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/yandex/diplom_2/UserLoginTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="5a013c32-2cc5-43b1-88b3-3387e5d18f72" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,21 +40,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "dev",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JUnit.OrderCreationTests.testCreateOrderWithAuthenticationAndIngredients">
     <configuration name="OrderCreationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="diplom_2" />
